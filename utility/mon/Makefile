@@ -15,7 +15,7 @@ install: msmon
 	@cp -p msmon /usr/bin
 
 msmon: 	$(FILES)
-	@cc $(FILES) -o msmon
+	@cc $(FILES) -o msmon -no-pie
 
 
 mon_p.o: 	mon_p.c ../global.h

@@ -15,7 +15,7 @@ install: msterm
 	@cp -p msterm /usr/bin
 
 msterm:	$(FILES)
-	@cc $(FILES) -o msterm
+	@cc $(FILES) -o msterm -no-pie
 
 term.o: 	term.c term.h
 	@$(CC)	term.c

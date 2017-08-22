@@ -157,7 +157,7 @@
 #if (LINUX_VERSION_CODE < VERSION_CODE(2,6,23))
 #define IRQ_T(info) ((info->flags & ASYNC_SHARE_IRQ) ? SA_SHIRQ : SA_INTERRUPT)
 #else
-#define IRQ_T(info) ((info->flags & ASYNC_SHARE_IRQ) ? IRQF_SHARED : IRQF_DISABLED)
+#define IRQ_T(info) IRQF_SHARED
 #endif
 
 #ifndef MIN
